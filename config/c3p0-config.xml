@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--配置c3p0连接池-->
+<c3p0-config>
+    <default-config>
+         <!--数据库链接的四大件-->
+         <property name = "jdbcUrl">jdbc:mysql://localhost:3306/test</property>
+         <property name = "driverClass">com.mysql.jdbc.Driver</property>
+         <property name = "user">root</property>
+         <property name = "password">123456</property>
+         <!--数据库连接池对象全部链接对象使用后，一次的递增量最大为多少
+              10个增加链接数量后最多到13个-->
+         <property name="acquirePoolSize">3</property>
+         <!--连接池初始化允许的最大的链接对象的数量-->
+         <property name="initialPoolSize">10</property>
+         <!--最低的链接数-->
+         <property name="minPoolSize">2</property>
+         <!--最大的链接数-->
+         <property name="maxPoolSize">10</property>
+    </default-config>
+</c3p0-config>
